@@ -1,460 +1,642 @@
-/* =====================================================
-   GENESYS X SALON - RESPONSIVE STYLESHEET
-   ===================================================== */
+/* =========================================================
+   GENESYS X SALON - PREMIUM WEBSITE STYLES
+   ========================================================= */
 
-/* ------------------------------
-   1. GLOBAL STYLES
-   ------------------------------ */
+
+/* =========================
+   1. GENERAL SETTINGS
+   ========================= */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    font-size: 100%;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f5f0;
-    color: #222;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fff8f5;
+    color: #30232d;
+    line-height: 1.7;
 }
 
-/* Responsive container using percentage width */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
 .container {
     width: 90%;
-    max-width: 75rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* ------------------------------
+
+/* =========================
    2. HEADER
-   ------------------------------ */
+   ========================= */
 
 header {
-    background-color: #111;
+    background: #32152f;
     color: white;
-    padding: 1rem 0;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.header-container {
-    width: 90%;
-    max-width: 75rem;
-    margin: auto;
-
+header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    gap: 2rem;
-}
-
-.logo {
-    width: 7rem;
-    height: auto;
+    gap: 30px;
 }
 
 header h1 {
-    font-size: 1.8rem;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #f7c978;
 }
 
-/* ------------------------------
+
+/* =========================
    3. NAVIGATION
-   ------------------------------ */
+   ========================= */
 
 nav ul {
     list-style: none;
-
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    gap: 1.5rem;
+    gap: 10px;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-
-    padding: 0.5rem 0.75rem;
-
-    transition: 0.3s ease;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #d4af37;
-    color: #111;
-    border-radius: 0.3rem;
+    background: #f7c978;
+    color: #32152f;
 }
 
-/* ------------------------------
+
+/* =========================
    4. HERO SECTION
-   ------------------------------ */
+   ========================= */
 
 .hero {
-    min-height: 70vh;
-
+    min-height: 620px;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 5rem 5%;
+    position: relative;
+    overflow: hidden;
 
     background:
-        linear-gradient(rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0.55)),
-        url("../images/salon.jpg");
+        linear-gradient(
+            135deg,
+            rgba(50, 21, 47, 0.96),
+            rgba(116, 48, 89, 0.88),
+            rgba(224, 130, 144, 0.72)
+        );
 
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-content {
-    max-width: 50rem;
     color: white;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(247, 201, 120, 0.15);
+    top: -120px;
+    right: -80px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    bottom: -100px;
+    left: -70px;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
 .hero h2 {
-    font-size: clamp(2rem, 5vw, 4rem);
-    margin-bottom: 1rem;
+    font-family: Georgia, serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.1;
+    max-width: 800px;
+    margin-bottom: 25px;
 }
 
 .hero p {
-    font-size: clamp(1rem, 2vw, 1.4rem);
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin-bottom: 35px;
+    color: #fff4ed;
 }
 
-.btn {
+
+/* =========================
+   5. BUTTONS
+   ========================= */
+
+.button {
     display: inline-block;
-
-    padding: 0.8rem 1.5rem;
-
-    background-color: #d4af37;
-    color: #111;
-
-    text-decoration: none;
-    font-weight: bold;
-
-    border-radius: 0.4rem;
-
-    transition: 0.3s ease;
+    background: #f7c978;
+    color: #32152f;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    border: 2px solid #f7c978;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
-.btn:hover {
-    transform: scale(1.05);
+.button:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
 }
 
-/* ------------------------------
-   5. GENERAL SECTIONS
-   ------------------------------ */
+
+/* =========================
+   6. SECTIONS
+   ========================= */
 
 section {
-    padding: 4rem 0;
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    background: #fff;
 }
 
 section h2 {
-    text-align: center;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    margin-bottom: 2rem;
+    font-family: Georgia, serif;
+    color: #32152f;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
 }
 
 section p {
-    max-width: 55rem;
-    margin: 0 auto 1rem;
+    max-width: 850px;
+    margin-bottom: 18px;
 }
 
-/* ------------------------------
-   6. MULTI-COLUMN CARDS
-   Desktop = multiple columns
-   ------------------------------ */
+
+/* =========================
+   7. SECTION HEADING DECORATION
+   ========================= */
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #e88991;
+}
+
+
+/* =========================
+   8. CARDS
+   ========================= */
 
 .card-container {
-    width: 90%;
-    max-width: 75rem;
-    margin: auto;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 2rem;
+    gap: 25px;
+    margin-top: 35px;
 }
 
 .card {
-    background-color: white;
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    border: 1px solid #f1dce2;
+    box-shadow: 0 10px 30px rgba(67, 30, 55, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
 
-    padding: 2rem;
+.card::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #fce3df;
+    border-radius: 50%;
+    top: -25px;
+    right: -20px;
+}
 
-    border-radius: 0.75rem;
-
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
-
-    text-align: center;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(67, 30, 55, 0.16);
 }
 
 .card h3 {
-    margin-bottom: 1rem;
+    color: #743059;
+    font-family: Georgia, serif;
     font-size: 1.4rem;
+    margin-bottom: 12px;
+    position: relative;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-
-    border-radius: 0.5rem;
-
-    margin-bottom: 1rem;
+.card p {
+    color: #66545f;
 }
 
-/* ------------------------------
-   7. SERVICES / PRODUCTS
-   ------------------------------ */
+
+/* =========================
+   9. SERVICES
+   ========================= */
 
 .services-grid {
-    width: 90%;
-    max-width: 75rem;
-    margin: auto;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 2rem;
+    gap: 25px;
+    margin-top: 35px;
 }
 
-.service {
-    background-color: white;
-
-    padding: 1.5rem;
-
-    border-radius: 0.75rem;
-
-    text-align: center;
-
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+.services-grid .card {
+    border-top: 5px solid #e88991;
 }
 
-.service img {
+.services-grid .card:nth-child(2) {
+    border-top-color: #f7c978;
+}
+
+.services-grid .card:nth-child(3) {
+    border-top-color: #743059;
+}
+
+
+/* =========================
+   10. IMAGES
+   ========================= */
+
+.responsive-image {
     width: 100%;
-    max-width: 100%;
     height: auto;
-
-    border-radius: 0.5rem;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(50, 21, 47, 0.15);
 }
 
-/* ------------------------------
-   8. ENQUIRY / CONTACT FORMS
-   ------------------------------ */
-
-.form-container {
-    width: 90%;
-    max-width: 50rem;
-
-    margin: auto;
+section img {
+    margin: 25px 0;
 }
+
+
+/* =========================
+   11. IMAGE HOVER EFFECT
+   ========================= */
+
+.card img {
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   12. FORMS
+   ========================= */
 
 form {
-    background-color: white;
-
-    padding: 2rem;
-
-    border-radius: 0.75rem;
-
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(67, 30, 55, 0.1);
+    border: 1px solid #f1dce2;
 }
 
 label {
     display: block;
-
-    margin-bottom: 0.4rem;
-
-    font-weight: bold;
+    font-weight: 700;
+    color: #32152f;
+    margin-bottom: 8px;
 }
 
 input,
 textarea,
 select {
     width: 100%;
-
-    padding: 0.8rem;
-
-    margin-bottom: 1.2rem;
-
-    border: 1px solid #ccc;
-
-    border-radius: 0.3rem;
-
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 2px solid #ead5dd;
+    border-radius: 12px;
+    font-family: inherit;
     font-size: 1rem;
+    background: #fffaf8;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #e88991;
+    box-shadow: 0 0 0 4px rgba(232, 137, 145, 0.12);
 }
 
 textarea {
-    min-height: 10rem;
-
+    min-height: 150px;
     resize: vertical;
 }
 
+input[type="submit"],
 button {
-    width: 100%;
-
-    padding: 0.9rem;
-
+    background: #743059;
+    color: white;
     border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-    background-color: #111;
+input[type="submit"]:hover,
+button:hover {
+    background: #32152f;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   13. ABOUT US
+   ========================= */
+
+.about-box {
+    background: linear-gradient(
+        135deg,
+        #fff,
+        #fff0ed
+    );
+
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 30px;
+    border-left: 6px solid #e88991;
+}
+
+
+/* =========================
+   14. SPECIAL OFFERS
+   ========================= */
+
+.offer {
+    background: linear-gradient(
+        135deg,
+        #32152f,
+        #743059,
+        #b85f76
+    );
 
     color: white;
-
-    font-size: 1rem;
-
-    font-weight: bold;
-
-    border-radius: 0.3rem;
-
-    cursor: pointer;
+    padding: 50px;
+    border-radius: 30px;
+    margin-top: 30px;
+    box-shadow: 0 15px 35px rgba(50, 21, 47, 0.2);
 }
 
-button:hover {
-    background-color: #d4af37;
-    color: #111;
+.offer h2,
+.offer h3 {
+    color: white;
 }
 
-/* ------------------------------
-   9. RESPONSIVE IMAGES
-   ------------------------------ */
-
-.responsive-image {
-    width: 100%;
-    height: auto;
-    display: block;
+.offer h2::after {
+    background: #f7c978;
 }
 
-/* ------------------------------
-   10. FOOTER
-   ------------------------------ */
+.offer p {
+    color: #fff3f1;
+}
+
+
+/* =========================
+   15. CONTACT INFORMATION
+   ========================= */
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.contact-box {
+    background: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    border-bottom: 5px solid #f7c978;
+    box-shadow: 0 10px 30px rgba(67, 30, 55, 0.08);
+}
+
+.contact-box h3 {
+    color: #743059;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   16. FOOTER
+   ========================= */
 
 footer {
-    background-color: #111;
+    background: #241323;
+    color: #e9dce6;
+    padding: 50px 0;
+    margin-top: 0;
+}
 
-    color: white;
-
+footer .container {
     text-align: center;
-
-    padding: 2rem 5%;
-
-    margin-top: 3rem;
 }
 
 footer p {
-    font-size: 0.9rem;
+    margin-bottom: 8px;
 }
 
-/* =====================================================
-   RESPONSIVE BREAKPOINTS
-   ===================================================== */
+footer p:first-child {
+    color: #f7c978;
+    font-weight: 700;
+}
 
-/* ------------------------------
-   TABLET
-   768px and below
-   ------------------------------ */
 
-@media screen and (max-width: 48rem) {
+/* =========================
+   17. MOBILE NAVIGATION
+   ========================= */
 
-    .header-container {
+@media (max-width: 768px) {
+
+    header .container {
         flex-direction: column;
-
         text-align: center;
     }
 
     nav ul {
         flex-wrap: wrap;
-
-        gap: 0.5rem;
-    }
-
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    section {
-        padding: 3rem 0;
-    }
-
-    .hero {
-        min-height: 60vh;
-    }
-}
-
-
-/* ------------------------------
-   MOBILE
-   480px and below
-   ------------------------------ */
-
-@media screen and (max-width: 30rem) {
-
-    html {
-        font-size: 90%;
-    }
-
-    .header-container {
-        width: 95%;
-    }
-
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-
-        width: 100%;
-
-        gap: 0.2rem;
+        justify-content: center;
     }
 
     nav a {
-        display: block;
-
-        width: 100%;
-
-        text-align: center;
+        font-size: 0.9rem;
+        padding: 8px 11px;
     }
 
     .hero {
-        min-height: 55vh;
-
-        padding: 3rem 5%;
+        min-height: 520px;
+        text-align: center;
     }
 
-    .card-container {
-        grid-template-columns: 1fr;
+    .hero h2 {
+        font-size: 3rem;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     section {
-        padding: 2.5rem 0;
+        padding: 60px 0;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .card-container,
+    .services-grid,
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   18. SMALL MOBILE DEVICES
+   ========================= */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 7px 9px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card-container,
+    .services-grid,
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 25px;
     }
 
     form {
-        padding: 1.25rem;
+        padding: 25px;
     }
 
-    .btn {
-        width: 100%;
+    .offer {
+        padding: 30px 20px;
     }
+
+}
+
+
+/* =========================
+   19. ACCESSIBILITY
+   ========================= */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #f7c978;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   20. SMOOTH ANIMATIONS
+   ========================= */
+
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero .container {
+    animation: fadeInUp 1s ease;
 }
