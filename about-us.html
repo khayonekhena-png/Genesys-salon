@@ -1,47 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
-    <!-- Makes the website responsive on phones and tablets -->
+    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
-       <!-- Connects the HTML page to the CSS stylesheet -->
+
+    <title>Genesys X Salon | About Us</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
- <nav>
-    <ul>
-        <li>
-            <a href="index.html">Homepage</a>
-        </li>
+        <div class="header-container">
 
-        <li>
-            <a href="about us.html">About Us</a>
-        </li>
+            <h1>Genesys X Salon</h1>
 
-        <li>
-            <a href="enquiry.html">Enquiry</a>
-        </li>
+            <!-- Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-        <li>
-            <a href="services.html">Services</a>
-        </li>
+        </div>
+    </header>
 
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
-    </ul>
-</nav>
-</header>
-<main>
 
-</main>
+    <main>
 
-<footer>
-    
-</footer>
+        <!-- About Us section -->
+        <section>
+
+            <h2>About Genesys X Salon</h2>
+
+            <!-- RESPONSIVE IMAGE -->
+            <img
+                src="images/about-medium.jpg"
+                srcset="
+                    images/about-small.jpg 480w,
+                    images/about-medium.jpg 768w,
+                    images/about-large.jpg 1200w
+                "
+                sizes="
+                    (max-width: 480px) 100vw,
+                    (max-width: 768px) 90vw,
+                    1200px
+                "
+                alt="Inside Genesys X Salon"
+                class="responsive-image">
+
+            <p>
+                Genesys X Salon is a professional hair and beauty salon
+                dedicated to helping customers express their individual
+                style and confidence.
+            </p>
+
+            <p>
+                We provide a comfortable and welcoming environment where
+                customers can receive professional hair care and styling
+                services.
+            </p>
+
+        </section>
+
+
+        <!-- Mission -->
+        <section>
+
+            <h2>Our Mission</h2>
+
+            <p>
+                Our mission is to provide quality salon services while
+                creating a positive and enjoyable experience for every
+                customer.
+            </p>
+
+        </section>
+
+
+        <!-- Vision -->
+        <section>
+
+            <h2>Our Vision</h2>
+
+            <p>
+                Our vision is to become a trusted salon known for
+                professional service, creativity, customer satisfaction
+                and quality hair care.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Genesys X Salon. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
