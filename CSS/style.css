@@ -640,3 +640,79 @@ select:focus {
 .hero .container {
     animation: fadeInUp 1s ease;
 }
+/* Scroll reveal animation */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FAQ accordion */
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+}
+
+/* Gallery lightbox */
+
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#lightbox-image {
+    max-width: 85%;
+    max-height: 85vh;
+}
+
+#close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+.enquiry-section {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.enquiry-section input,
+.enquiry-section textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.enquiry-section button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
