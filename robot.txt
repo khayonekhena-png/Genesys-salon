@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-WEBSITE-URL/sitemap.xml
+Sitemap: https://genesys-x-salon.netlify.app/sitemap.xml

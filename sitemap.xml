@@ -3,23 +3,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/</loc>
+        <loc>https://genesys-x-salon.netlify.app/</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/about%20us.html</loc>
+        <loc>https://genesys-x-salon.netlify.app/about%20us.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/services.html</loc>
+        <loc>https://genesys-x-salon.netlify.app/services.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/enquiry.html</loc>
+        <loc>https://genesys-x-salon.netlify.app/enquiry.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-WEBSITE-URL/contact.html</loc>
+        <loc>https://genesys-x-salon.netlify.app/contact.html</loc>
     </url>
 
 </urlset>
